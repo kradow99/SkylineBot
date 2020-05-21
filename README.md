@@ -6,7 +6,7 @@ Chatbot de Telegram que permite la manipulación de Skylines via un intérprete.
 
 Este chatbot permite al usuario interactuar con él, enviándole una serie de instrucciones para generar imágenes de skylines, en forma de gráficos de barras. Cualquier persona puede utilizarlo en modo usuario desde su dispositivo móvil, tablet, PC, etc. accediendo a este [link](http://t.me/skyline_marcos_bot)
 
-![Ejemplo de chat 1](ejemplo1.png)
+![Ejemplo de chat](ejemplo_chat.png)
 
 ## Ejecutar el bot
 
