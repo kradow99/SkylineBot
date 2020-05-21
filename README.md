@@ -111,8 +111,8 @@ Ejemplos:
 ```
 a:={10,20,5,0,50}
 b:=[(0,10,3), (2,5,10), (20,3,25), (1,20,2)]
-c:=(a+50)\*b
-a:=(-c) //en este caso, el valor de a se pierde y es reemplazado por el de -c
+c:=(a+50)*b
+a:=(-c) //en este caso, el valor de 'a' se pierde y es reemplazado por el de '-c'
 ```
 
 ## Aspectos técnicos
@@ -123,7 +123,7 @@ aqui explicar temas de sintaxis
 
 ### Guardar/cargar skylines
 
-Cada usuario puede guardar o cargar sus propios skylines. Aunque varios usuarios guarden un skyline con el mismo identificador estos no se solaparán, ya que cada usuario tendrá un directorio con su chat_id como nombre, y en el que se almacenarán los skylines que guarde.
+Cada usuario puede guardar o cargar sus propios skylines. Esto permite recuperar skylines cuando se limpia la lista de identificadores, o cuando se reinicia el bot. Aunque varios usuarios guarden un skyline con el mismo identificador estos no se solaparán, ya que cada usuario tendrá un directorio con su chat_id como nombre, y en el que se almacenarán los skylines que guarde.
 
 Cabe mencionar que no se pueden cargar skylines no existentes, ni guardar skylines no definidos con un identificador. Además, si hay guardado un skyline y se guarda otro con el mismo identificador, el antiguo será reemplazado.
 
