@@ -73,6 +73,8 @@ Hay 3 maneras de definir un skyline:
 
 Genera un skyline de un único edificio con anchura xmin~xmax y altura h.
 
+*xmin debe ser < xmax, y h debe ser > 0*
+
 Ejemplo:
 
 ```
@@ -80,6 +82,7 @@ Ejemplo:
 ```
 
 **Compuesto =>** [(xmin,h,xmax)...]
+
 Genera un numero arbitrario de skylines simples. El skyline resultante es la unión de todos ellos.
 
 Ejemplo:
@@ -91,6 +94,8 @@ Ejemplo:
 **Aleatorio =>** {n,h,w,xmin,xmax}
 
 Construye un skyline de n edificios, cada uno de ellos con una altura aleatoria entre 0 i h, con una anchura aleatoria entre 1 i w, y una posición de inicio y de final aleatoria entre xmin y xmax.
+
+*h y n deben ser >= 0, xmin debe ser < xmax, y w debe ser <= xmax-xmin*
 
 Ejemplo:
 
