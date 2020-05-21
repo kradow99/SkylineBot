@@ -30,7 +30,7 @@ pyhton-telegram-bot
 
 ### Comandos
 
-El bot puede recibir una serie de comandos, los cuales empiezan por el carácter ``/``, y son los siguientes:
+El bot puede recibir una serie de comandos, los cuales empiezan por el carácter `/`, y son los siguientes:
 
 
   **/start   =>** inicia la conversación con el bot
@@ -69,7 +69,8 @@ Además se admite el uso de paréntesis como operador de máxima prioridad.
 
 Hay 3 maneras de definir un skyline:
 
-*Simple* => (xmin,h,xmax)
+**Simple =>** (xmin,h,xmax)
+
 Genera un skyline de un único edificio con anchura xmin~xmax y altura h.
 
 Ejemplo:
@@ -78,7 +79,7 @@ Ejemplo:
 (10,30,25)
 ```
 
-*Compuesto* => [(xmin,h,xmax)...]
+**Compuesto =>** [(xmin,h,xmax)...]
 Genera un numero arbitrario de skylines simples. El skyline resultante es la unión de todos ellos.
 
 Ejemplo:
@@ -87,7 +88,8 @@ Ejemplo:
 [(0,10,3), (2,5,10), (20,3,25), (1,20,2)]
 ```
 
-*Aleatorio* => {n,h,w,xmin,xmax}
+**Aleatorio =>** {n,h,w,xmin,xmax}
+
 Construye un skyline de n edificios, cada uno de ellos con una altura aleatoria entre 0 i h, con una anchura aleatoria entre 1 i w, y una posición de inicio y de final aleatoria entre xmin y xmax.
 
 Ejemplo:
@@ -97,7 +99,7 @@ Ejemplo:
 ```
 
 ### Asignación de skylines
-Se pueden asignar identificadores a skylines, mediante el operador ':='
+Se pueden asignar identificadores a skylines, mediante el operador `:=`
 
 Ejemplos:
 
