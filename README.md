@@ -28,33 +28,45 @@ pyhton-telegram-bot
 
 ## Instrucciones de uso
 
-###Comandos
+### Comandos
 
-El bot puede recibir una serie de comandos, los cuales empiezan por el carácter '/', y son los siguientes:
-
-
-/start   => inicia la conversación con el bot
-/help    => muestra el manual de uso del bot
-/author  => muestra el nombre y email del autor
-/lst     => muestra los identificadores definidos y su correspondiente área
-/clean   => borra todos los identificadores definidos en la conversación
-/save id => guarda un skyline previamente definido, cuyo identificador es 'id'
-/load id => guarda un skyline previamente guardado, cuyo identificador es 'id'
+El bot puede recibir una serie de comandos, los cuales empiezan por el carácter ``/``, y son los siguientes:
 
 
-###Instrucciones
+**/start   =>** inicia la conversación con el bot
+
+**/help    =>** muestra el manual de uso del bot
+
+**/author  =>** muestra el nombre y email del autor
+
+**/lst     =>** muestra los identificadores definidos y su correspondiente área
+
+**/clean   =>** borra todos los identificadores definidos en la conversación
+
+**/save id =>** guarda un skyline previamente definido, cuyo identificador es 'id'
+
+**/load id =>** guarda un skyline previamente guardado, cuyo identificador es 'id'
+
+
+### Instrucciones
 
 Esta es la lista de instrucciones que el usuario puede realizar sobre algún skyline. Están ordenadas de mayor a menor prioridad.
 Además se admite el uso de paréntesis como operador de máxima prioridad.
 
-*Refleja el skyline* => -skyline
-*Intersección* => skyline\*skyline
-*Replicación N veces seguidas* => skyline\*N
-*Unión* => skyline+skyline
-*Despl. a la derecha N posiciones* => skyline+N
-*Despl. a la izquierda N posiciones* => skyline-N
+**Refleja el skyline =>** -skyline
 
-###Definición de skyline
+
+**Intersección =>** skyline\*skyline
+
+**Replicación N veces seguidas =>** skyline\*N
+
+**Unión =>** skyline+skyline
+
+**Despl. a la derecha N posiciones =>** skyline+N
+
+**Despl. a la izquierda N posiciones =>** skyline-N
+
+### Definición de skyline
 
 Hay 3 maneras de definir un skyline:
 
