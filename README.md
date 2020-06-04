@@ -115,11 +115,19 @@ c:=(a+50)*b
 a:=(-c) //en este caso, el valor de 'a' se pierde y es reemplazado por el de '-c'
 ```
 
-## Aspectos técnicos
+## Algunos aspectos técnicos
 
-### Gramáticaaa
+### Implementación del skyline
 
-aqui explicar temas de sintaxis
+Cuando nos preguntamos cuál es la representación de un skyline, que es un conjunto de edificios, y vemos su implementacion, nos damos cuenta de que en realidad el skyline está definido como una lista de pares [x,h], ordenada crecientemente por las 'x'. De esta manera la única información que se necesita saber sobre el skyline son los cambios de altura: Dónde hay un cambio de altura (x), y cuál es la nueva altura (h).
+
+Esta implementación es realmente praćtica ya que a la hora de realizar la unión o intersección de dos skylines simplemente hay que "fusionarlos", actualizar alturas que se ven afectadas por el otro skyline, añadir nuevas alturas del otro skyline o eliminar alturas que se ven opacadas por otro skyline. También es realmente práctico para definir skylines random, los cuales se crean como la unión de edificios simples consecutivamente (aunque mediante un método a parte para la unión de un skyline con un edificio simple, que proporciona mejor rendimiento que la unión normal).
+
+A la hora de calcular el área del skyline nos basta con ir acumulando sub-áreas de rectánculos comprimidos en cada cambio de altura del skyline. Y para calcular su altura simplemente hay que buscar el punto más alto de todos los cambios de altura.
+
+### Intérprete
+
+Para diseñar el intérprete de los mensajes que el usuario introduce al bot, se ha creado una [gramática](cl/Skyline.g) muy simple en formato `antlr4`, que analiza el contenido léxico y sintáctico de los mensajes mediante un [lexer](SkylineLexer.py) y un [parser](cl/SkylineParser.py), y finalmente el [visitor](cl/SkylineVisitor.py) recorre el árbol de sintaxis abstracta para obtener un resultado en función del contenido del mensaje.
 
 ### Guardar/cargar skylines
 
