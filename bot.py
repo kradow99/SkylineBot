@@ -16,7 +16,9 @@ def evalMsg(msg, t):
     visitor = SkylineVisitor(t)
     tree = parser.root()
     result = visitor.visit(tree)
-    return result
+    errors = parser.getNumberOfSyntaxErrors()
+    if errors == 0:
+        return result
 
 
 def start(update, context):

@@ -10,17 +10,20 @@ class Skyline:
         self.area = Skyline.getArea(bs)
         self.height = Skyline.getHeight(bs)
 
-    def simple(xmin, height, xmax):
-        if (xmin >= xmax or height < 0):
-            return []
-        return [[xmin, height], [xmax, 0]]
-
+    # Returns a deep copy of the elements (lists) in l
     def deepcopy(l):
         result = []
         for x in l:
             result.append(x.copy())
         return result
 
+    # Returns a simple building
+    def simple(xmin, height, xmax):
+        if (xmin >= xmax or height < 0):
+            return []
+        return [[xmin, height], [xmax, 0]]
+
+    # Returns a random set of n buildings with the given parameters
     def random(n, h, w, xmin, xmax):
         bs = []
         if (n <= 0 or h < 0 or xmin >= xmax or xmax-xmin < w):
@@ -37,6 +40,7 @@ class Skyline:
         Skyline.clean(bs)
         return bs
 
+    # Deletes possible hiden points in the bs buildings
     def clean(bs):
         i = 0
         while i < len(bs)-2:
@@ -47,6 +51,7 @@ class Skyline:
             else:
                 i += 1
 
+    # Updates the bs buildgings by adding a new building b1
     def addBuilding(bs, b1):
         xmin = b1[0][0]
         xmax = b1[1][0]
@@ -86,6 +91,7 @@ class Skyline:
         elif bs[i][0] != xmax and last_y < h:
             bs.insert(i, [xmax, last_y])
 
+    # Returns the union of bs1 and bs2 buildings
     def union(bs1, bs2):
         if bs1 == []:
             return bs2
@@ -146,6 +152,7 @@ class Skyline:
         Skyline.clean(result)
         return result
 
+    # Returns the bs buildings but replicated n times
     def replic(bs, n):
         dist_ini = bs[-1][0] - bs[0][0]
         dist = 0
@@ -156,12 +163,14 @@ class Skyline:
         Skyline.clean(result)
         return result
 
+    # Returns the bs buildings but displaced n positions
     def despl(bs, n):
         result = bs
         for b in result:
             b[0] += n
         return result
 
+    # Returns the bs buildings but reflected
     def mirror(bs):
         xmin = bs[0][0]
         xmax = bs[-1][0]
@@ -176,6 +185,7 @@ class Skyline:
             result.append([new_x, new_y])
         return result
 
+    # Returns the intersection of bs1 and bs2 buildings
     def intersection(bs1, bs2):
         result = []
         i = 0
@@ -216,6 +226,7 @@ class Skyline:
         Skyline.clean(result)
         return result
 
+    # Returns a plot representing the bs buildings
     def getPlot(bs):
         if bs == []:
             plt.fill_between([0, 0], [0, 1])
@@ -234,6 +245,7 @@ class Skyline:
         plt.fill_between(xs, ys)
         return plt
 
+    # Returns the area of the given bs buildings
     def getArea(bs):
         a = 0
         for i in range(len(bs)-1):
@@ -242,6 +254,7 @@ class Skyline:
             a += b*h
         return a
 
+    # Returns the maximum height of the given bs buildings
     def getHeight(bs):
         h = 0
         for b in bs:
