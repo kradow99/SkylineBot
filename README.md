@@ -128,7 +128,7 @@ A la hora de calcular el área del skyline nos basta con ir acumulando sub-área
 
 ### Intérprete
 
-Para diseñar el intérprete de los mensajes que el usuario introduce al bot, se ha creado una [gramática](cl/Skyline.g) muy simple en formato `antlr4`, que analiza el contenido léxico y sintáctico de los mensajes mediante un [lexer](SkylineLexer.py) y un [parser](cl/SkylineParser.py), y finalmente el [visitor](cl/SkylineVisitor.py) recorre el árbol de sintaxis abstracta para obtener un resultado en función del contenido del mensaje.
+Para diseñar el intérprete de los mensajes que el usuario introduce al bot, se ha creado una [gramática](cl/Skyline.g) muy simple en formato `antlr4`, que analiza el contenido léxico y sintáctico de los mensajes mediante un [lexer](cl/SkylineLexer.py) y un [parser](cl/SkylineParser.py), y finalmente el [visitor](cl/SkylineVisitor.py) recorre el árbol de sintaxis abstracta para obtener un resultado en función del contenido del mensaje.
 
 ### Guardar/cargar skylines
 
