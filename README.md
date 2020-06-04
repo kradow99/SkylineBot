@@ -46,7 +46,7 @@ El bot puede recibir una serie de comandos, los cuales empiezan por el carácter
 
   **/save id =>** guarda un skyline previamente definido, cuyo identificador es 'id'
 
-  **/load id =>** guarda un skyline previamente guardado, cuyo identificador es 'id'
+  **/load id =>** carga un skyline previamente guardado, cuyo identificador es 'id'
 
 
 ### Instrucciones
