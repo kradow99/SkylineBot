@@ -62,9 +62,9 @@ Además se admite el uso de paréntesis como operador de máxima prioridad.
 
   **Unión =>** skyline+skyline
 
-  **Despl. a la derecha N posiciones =>** skyline+N
+  **Desplazamiento a la derecha N posiciones =>** skyline+N
 
-  **Despl. a la izquierda N posiciones =>** skyline-N
+  **Desplazamiento a la izquierda N posiciones =>** skyline-N
 
 ### Definición de skyline
 
