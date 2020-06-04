@@ -120,7 +120,7 @@ a:=(-c) //en este caso, el valor de 'a' se pierde y es reemplazado por el de '-c
 
 ### Implementación del skyline
 
-Cuando nos preguntamos cuál es la representación de un skyline, que es un conjunto de edificios, y vemos su implementacion, nos damos cuenta de que en realidad el skyline está definido como una lista de pares [x,h], ordenada crecientemente por las 'x'. De esta manera la única información que se necesita saber sobre el skyline son los cambios de altura: Dónde hay un cambio de altura (x), y cuál es la nueva altura (h).
+Cuando nos preguntamos cuál es la representación de un [skyline](skyline.py), que es un conjunto de edificios, y vemos su implementacion, nos damos cuenta de que en realidad el skyline está definido como una lista de pares [x,h], ordenada crecientemente por las 'x'. De esta manera la única información que se necesita saber sobre el skyline son los cambios de altura: Dónde hay un cambio de altura (x), y cuál es la nueva altura (h).
 
 Esta implementación es realmente praćtica ya que a la hora de realizar la unión o intersección de dos skylines simplemente hay que "fusionarlos", actualizar alturas que se ven afectadas por el otro skyline, añadir nuevas alturas del otro skyline o eliminar alturas que se ven opacadas por otro skyline. También es realmente práctico para definir skylines random, los cuales se crean como la unión de edificios simples consecutivamente (aunque mediante un método a parte para la unión de un skyline con un edificio simple, que proporciona mejor rendimiento que la unión normal).
 
