@@ -25,6 +25,7 @@ antlr4-python3-runtime
 matplotlib
 pyhton-telegram-bot
 ```
+El resto de librerías utilizadas pertenecen a [The Python Standard Library](https://docs.python.org/3/library/)
 
 ## Instrucciones de uso
 
